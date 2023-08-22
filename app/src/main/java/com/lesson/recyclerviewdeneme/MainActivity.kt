@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-var sporListesi=ArrayList<String>()
+val sporListesi=ArrayList<String>()
 
         sporListesi.add("Futbol Icerikleri")
         sporListesi.add("Basketbol Icerikleri")
