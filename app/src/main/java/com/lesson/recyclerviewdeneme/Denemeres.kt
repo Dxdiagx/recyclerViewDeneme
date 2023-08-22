@@ -11,14 +11,14 @@ class Denemeres : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_denemeres)
 
-        val sporIcerigi=intent.getStringExtra("sporIcerigi")
-        val sporGorselListesi=intent.getIntExtra("sporGorselListesi",0)
-        val bitmap= BitmapFactory.decodeResource(applicationContext.resources,sporGorselListesi)
+        val sporIcerigi = intent.getStringExtra("sporIcerigi")
+        val sporGorselListesi = intent.getIntExtra("sporGorselListesi", 0)
+        val bitmap = BitmapFactory.decodeResource(applicationContext.resources, sporGorselListesi)
 
-        var textView : TextView=findViewById(R.id.textView)
-        var imageView : ImageView=findViewById(R.id.imageView)
+        val textView: TextView = findViewById(R.id.textView)
+        val imageView: ImageView = findViewById(R.id.imageView)
 
-        textView.text=sporIcerigi
+        textView.text = sporIcerigi
         imageView.setImageBitmap(bitmap)
     }
 }
