@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter(val haberListesi : ArrayList<String>, val haberIcerigi : ArrayList<String>, val sporGorselListesi : ArrayList<Int>) : RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>()  {
+class RecyclerAdapter(val sporListesi : ArrayList<String>, val sporIcerigi : ArrayList<String>, val sporGorselListesi : ArrayList<Int>) : RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>()  {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 val recyclerViewTextView: TextView=itemView.findViewById(R.id.recyclerViewTextView)
     }
@@ -18,14 +18,14 @@ val itemView=LayoutInflater.from(parent.context).inflate(R.layout.list_item,pare
     }
 
     override fun getItemCount(): Int {
-        return haberListesi.size
+        return sporListesi.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.recyclerViewTextView.text=haberListesi.get(position)
+        holder.recyclerViewTextView.text=sporListesi.get(position)
         holder.itemView.setOnClickListener {
 val intent=Intent(holder.itemView.context,Denemeres::class.java)
-            intent.putExtra("sporIcerigi",haberIcerigi.get(position))
+            intent.putExtra("sporIcerigi",sporIcerigi.get(position))
             intent.putExtra("sporGorselListesi",sporGorselListesi.get(position))
             holder.itemView.context.startActivity(intent)
         }

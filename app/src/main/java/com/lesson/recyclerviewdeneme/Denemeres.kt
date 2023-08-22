@@ -14,6 +14,7 @@ class Denemeres : AppCompatActivity() {
         val sporIcerigi=intent.getStringExtra("sporIcerigi")
         val sporGorselListesi=intent.getIntExtra("sporGorselListesi",0)
         val bitmap= BitmapFactory.decodeResource(applicationContext.resources,sporGorselListesi)
+
         var textView : TextView=findViewById(R.id.textView)
         var imageView : ImageView=findViewById(R.id.imageView)
 
